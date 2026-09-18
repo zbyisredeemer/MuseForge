@@ -1,0 +1,19 @@
+{
+  "camera_profiles": [
+    {
+      "id": "cinematic_portrait",
+      "lens": "85mm",
+      "keywords": ["portrait lens", "shallow depth of field", "cinematic photography"]
+    },
+    {
+      "id": "fashion_editorial",
+      "lens": "50mm",
+      "keywords": ["fashion photography", "studio lighting", "high detail"]
+    },
+    {
+      "id": "street_photo",
+      "lens": "35mm",
+      "keywords": ["street photography", "natural light", "documentary style"]
+    }
+  ]
+}
