@@ -1,0 +1,6 @@
+{
+  "face_shapes": ["oval face", "heart shaped face", "round face", "sharp jawline"],
+  "eyes": ["large eyes", "deep eyes", "almond eyes", "bright eyes"],
+  "expressions": ["gentle smile", "confident look", "calm expression", "mysterious gaze"],
+  "temperaments": ["elegant", "cute", "cool", "mature", "intellectual"]
+}
