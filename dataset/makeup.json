@@ -1,0 +1,28 @@
+{
+  "makeup_styles": [
+    {
+      "id": "natural_makeup",
+      "name": "Natural Makeup",
+      "description": "清透自然妆容，突出真实皮肤质感",
+      "keywords": ["natural skin", "soft makeup", "fresh beauty"]
+    },
+    {
+      "id": "korean_makeup",
+      "name": "Korean Makeup",
+      "description": "韩系清新妆容",
+      "keywords": ["korean beauty", "soft tone", "youthful"]
+    },
+    {
+      "id": "french_makeup",
+      "name": "French Makeup",
+      "description": "法式优雅妆容",
+      "keywords": ["french elegance", "red lips", "classic beauty"]
+    },
+    {
+      "id": "fantasy_makeup",
+      "name": "Fantasy Makeup",
+      "description": "奇幻角色妆容",
+      "keywords": ["fantasy", "magical", "ethereal"]
+    }
+  ]
+}
