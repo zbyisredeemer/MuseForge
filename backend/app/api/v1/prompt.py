@@ -1,8 +1,20 @@
-"""Prompt generation API skeleton."""
+"""Prompt generation API routes."""
+
+from fastapi import APIRouter
+from pydantic import BaseModel
+
+router = APIRouter(tags=["prompt"])
+
+
+class PromptRequest(BaseModel):
+    country: str = "China"
+    style: str = "Eastern Classical Beauty"
+    clothing: str = "Hanfu"
+    scene: str = "Autumn Garden"
+    camera: str = "85mm cinematic"
 
 
 def generate_prompt(payload: dict) -> dict:
-    """Generate a structured beauty prompt from attributes."""
     parts = [
         payload.get("style"),
         payload.get("country"),
@@ -18,3 +30,8 @@ def generate_prompt(payload: dict) -> dict:
         "negative_prompt": "low quality, blurry, bad anatomy",
         "tags": payload,
     }
+
+
+@router.post("/prompt/generate")
+def prompt_generate(request: PromptRequest):
+    return generate_prompt(request.model_dump())
