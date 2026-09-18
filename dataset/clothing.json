@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "id": "traditional",
+      "items": ["Hanfu", "Kimono", "Cheongsam", "Sari", "Korean Hanbok"]
+    },
+    {
+      "id": "fashion",
+      "items": ["Elegant Dress", "Business Suit", "Street Fashion", "Luxury Fashion"]
+    },
+    {
+      "id": "fantasy",
+      "items": ["Fantasy Robe", "Royal Dress", "Elf Costume"]
+    }
+  ]
+}
