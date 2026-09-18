@@ -1,0 +1,24 @@
+{
+  "poses": [
+    {
+      "id": "standing_portrait",
+      "name": "Standing Portrait",
+      "keywords": ["standing pose", "portrait", "elegant posture"]
+    },
+    {
+      "id": "walking_street",
+      "name": "Street Walking",
+      "keywords": ["walking naturally", "street photography", "dynamic pose"]
+    },
+    {
+      "id": "window_reading",
+      "name": "Window Reading",
+      "keywords": ["reading book", "window light", "quiet moment"]
+    },
+    {
+      "id": "cinematic_side_pose",
+      "name": "Cinematic Side Pose",
+      "keywords": ["side profile", "cinematic portrait", "dramatic composition"]
+    }
+  ]
+}
