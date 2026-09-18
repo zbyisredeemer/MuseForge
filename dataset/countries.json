@@ -1,0 +1,34 @@
+{
+  "countries": [
+    {
+      "country": "China",
+      "regions": ["Jiangnan", "Xinjiang", "Tibet", "Yunnan"],
+      "beauty_keywords": ["oriental elegance", "natural beauty", "traditional aesthetics"],
+      "styles": ["Hanfu Beauty", "Modern Chinese Beauty"]
+    },
+    {
+      "country": "Japan",
+      "regions": ["Kyoto", "Tokyo", "Hokkaido"],
+      "beauty_keywords": ["minimal beauty", "soft expression", "refined elegance"],
+      "styles": ["Kimono Beauty", "Japanese Street Beauty"]
+    },
+    {
+      "country": "Korea",
+      "regions": ["Seoul", "Busan"],
+      "beauty_keywords": ["clean makeup", "idol style", "fashion aesthetic"],
+      "styles": ["K-pop Beauty", "Korean Fashion Beauty"]
+    },
+    {
+      "country": "France",
+      "regions": ["Paris", "Provence"],
+      "beauty_keywords": ["french elegance", "chic", "artistic"],
+      "styles": ["Parisian Beauty"]
+    },
+    {
+      "country": "Italy",
+      "regions": ["Milan", "Rome", "Sicily"],
+      "beauty_keywords": ["luxury", "mediterranean charm"],
+      "styles": ["Italian Fashion Beauty"]
+    }
+  ]
+}
