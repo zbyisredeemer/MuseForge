@@ -1,0 +1,24 @@
+{
+  "scenes": [
+    {
+      "id": "kyoto_autumn",
+      "name": "Kyoto Autumn Street",
+      "keywords": ["Kyoto", "autumn leaves", "traditional street"]
+    },
+    {
+      "id": "jiangnan_garden",
+      "name": "Jiangnan Garden",
+      "keywords": ["Chinese garden", "pond", "traditional architecture"]
+    },
+    {
+      "id": "paris_cafe",
+      "name": "Paris Cafe",
+      "keywords": ["Paris", "cafe", "urban elegance"]
+    },
+    {
+      "id": "snow_mountain",
+      "name": "Snow Mountain",
+      "keywords": ["snow mountain", "cold atmosphere", "cinematic landscape"]
+    }
+  ]
+}
