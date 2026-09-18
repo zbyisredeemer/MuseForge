@@ -1,0 +1,18 @@
+{
+  "age": [
+    "young adult",
+    "mature woman",
+    "elegant woman"
+  ],
+  "appearance": [
+    "natural beauty",
+    "cinematic face",
+    "expressive eyes"
+  ],
+  "emotion": [
+    "confident",
+    "gentle",
+    "thoughtful",
+    "mysterious"
+  ]
+}
