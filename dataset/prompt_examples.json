@@ -1,0 +1,14 @@
+{
+  "prompts": [
+    {
+      "id": "hanfu_autumn_garden",
+      "tags": ["China", "Hanfu", "Autumn", "Cinematic"],
+      "prompt": "A beautiful Chinese woman wearing elegant Hanfu standing in an ancient garden during autumn, soft golden sunlight, cinematic photography, 85mm lens, ultra realistic, highly detailed"
+    },
+    {
+      "id": "paris_fashion_portrait",
+      "tags": ["France", "Fashion", "Urban"],
+      "prompt": "A stylish Parisian woman walking on a Paris street, elegant fashion outfit, natural makeup, cinematic street photography, soft light, realistic portrait"
+    }
+  ]
+}
