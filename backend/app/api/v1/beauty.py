@@ -4,7 +4,9 @@ MuseForge v1 API skeleton.
 """
 
 from typing import List
+from fastapi import APIRouter
 
+router = APIRouter(tags=["beauty"])
 
 BEAUTY_STYLES = [
     {
@@ -20,6 +22,11 @@ BEAUTY_STYLES = [
         "tags": ["Japan", "Kimono", "Traditional"],
     },
 ]
+
+
+@router.get("/beauty/styles")
+def beauty_styles():
+    return BEAUTY_STYLES
 
 
 def list_beauty_styles() -> List[dict]:
