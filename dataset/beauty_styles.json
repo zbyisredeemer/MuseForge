@@ -1,0 +1,28 @@
+{
+  "styles": [
+    {
+      "id": "eastern_classic_beauty",
+      "name": "Eastern Classic Beauty",
+      "description": "Elegant oriental female beauty with traditional aesthetics",
+      "keywords": ["elegant", "soft", "classical", "oriental"]
+    },
+    {
+      "id": "modern_city_beauty",
+      "name": "Modern City Beauty",
+      "description": "Contemporary urban female portrait style",
+      "keywords": ["fashion", "urban", "confident", "modern"]
+    },
+    {
+      "id": "nordic_minimal_beauty",
+      "name": "Nordic Minimal Beauty",
+      "description": "Clean and natural northern European aesthetic",
+      "keywords": ["natural", "minimal", "cold tone", "elegant"]
+    },
+    {
+      "id": "fantasy_goddess",
+      "name": "Fantasy Goddess",
+      "description": "Fantasy female character with magical atmosphere",
+      "keywords": ["fantasy", "mysterious", "beautiful", "cinematic"]
+    }
+  ]
+}
