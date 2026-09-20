@@ -7,12 +7,15 @@ from typing import Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
+
+from app.services.model_adapter import SUPPORTED_MODELS, adapt_all, adapt_prompt
 
 
 app = FastAPI(
     title="MuseForge API",
     description="AI Beauty Prompt Engineering API",
-    version="0.3.0",
+    version="0.4.0",
 )
 
 app.add_middleware(
@@ -24,6 +27,30 @@ app.add_middleware(
 )
 
 GALLERY_PATH = Path(__file__).resolve().parent / "data" / "gallery_manifest.json"
+
+
+class PromptGenerateRequest(BaseModel):
+    subject: str = "A fictional adult woman"
+    beauty_style: str = ""
+    country: str = ""
+    clothing: str = ""
+    scene: str = ""
+    pose: str = ""
+    camera: str = ""
+    negative_prompt: str = (
+        "child, minor, underage, explicit nudity, pornographic, low quality, blurry, "
+        "bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, "
+        "text, watermark, logo"
+    )
+    aspect_ratio: str = "4:5"
+    model: str = Field(default="generic")
+
+
+class PromptAdaptRequest(BaseModel):
+    prompt: str
+    negative_prompt: str = ""
+    aspect_ratio: str = "4:5"
+    model: str = "generic"
 
 
 def load_gallery() -> dict:
@@ -62,9 +89,30 @@ def similarity_score(source: dict, candidate: dict) -> int:
     return score
 
 
+def canonical_prompt(payload: PromptGenerateRequest) -> str:
+    parts = [
+        payload.subject,
+        payload.beauty_style,
+        payload.country,
+        payload.clothing,
+        payload.scene,
+        payload.pose,
+        payload.camera,
+        "natural facial proportions",
+        "tasteful styling",
+        "high detail",
+    ]
+    return ", ".join(item.strip() for item in parts if item and item.strip())
+
+
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "museforge", "version": "0.3.0"}
+    return {
+        "status": "ok",
+        "service": "museforge",
+        "version": "0.4.0",
+        "prompt_models": list(SUPPORTED_MODELS),
+    }
 
 
 @app.get("/api/v1/gallery")
@@ -122,23 +170,48 @@ def get_gallery_item(item_id: str):
     return item
 
 
-@app.post("/api/v1/prompt/generate")
-def generate_prompt(payload: dict):
-    parts = [
-        payload.get("subject", "A fictional adult woman"),
-        payload.get("beauty_style"),
-        payload.get("country"),
-        payload.get("clothing"),
-        payload.get("scene"),
-        payload.get("pose"),
-        payload.get("camera"),
-    ]
-    prompt = ", ".join([item for item in parts if item])
+@app.get("/api/v1/prompt/models")
+def prompt_models():
     return {
-        "prompt": prompt,
-        "negative_prompt": (
-            "child, minor, underage, explicit nudity, pornographic, low quality, "
-            "blurry, bad anatomy, deformed hands, extra fingers, duplicate person, "
-            "distorted face, text, watermark, logo"
-        ),
+        "models": [
+            {"id": "generic", "label": "Generic", "strategy": "portable baseline"},
+            {"id": "midjourney", "label": "Midjourney", "strategy": "parameters and --no"},
+            {"id": "flux", "label": "FLUX", "strategy": "descriptive natural language"},
+            {"id": "stable-diffusion", "label": "Stable Diffusion", "strategy": "positive and negative prompts"},
+        ]
+    }
+
+
+@app.post("/api/v1/prompt/adapt")
+def adapt_existing_prompt(payload: PromptAdaptRequest):
+    try:
+        return adapt_prompt(
+            payload.model,
+            payload.prompt,
+            payload.negative_prompt,
+            payload.aspect_ratio,
+        ).to_dict()
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+
+@app.post("/api/v1/prompt/adapt-all")
+def adapt_existing_prompt_all(payload: PromptAdaptRequest):
+    return {
+        "canonical_prompt": payload.prompt,
+        "outputs": adapt_all(payload.prompt, payload.negative_prompt, payload.aspect_ratio),
+    }
+
+
+@app.post("/api/v1/prompt/generate")
+def generate_prompt(payload: PromptGenerateRequest):
+    prompt = canonical_prompt(payload)
+    try:
+        adapted = adapt_prompt(payload.model, prompt, payload.negative_prompt, payload.aspect_ratio)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    return {
+        "canonical_prompt": prompt,
+        "output": adapted.to_dict(),
     }

@@ -2,7 +2,7 @@
 
 > Open-source AI Beauty Prompt Engineering Platform
 
-MuseForge is a structured prompt-engineering project for **AI beauty portrait creation**. It combines visual inspiration, reusable prompt data, a searchable Gallery, a Prompt Studio, and a small FastAPI service.
+MuseForge is a structured prompt-engineering project for **AI beauty portrait creation**. It combines visual inspiration, reusable prompt data, a searchable Gallery, a model-aware Prompt Studio, and a FastAPI service.
 
 ## Current status
 
@@ -12,9 +12,10 @@ MuseForge is a structured prompt-engineering project for **AI beauty portrait cr
 - Search + category tree
 - Random style discovery
 - Similar-style recommendation
-- Prompt + negative-prompt copy
 - Gallery → Studio remix flow
-- FastAPI Gallery / recommendation endpoints
+- **4 prompt adapters: Generic / Midjourney / FLUX / Stable Diffusion**
+- FastAPI Gallery + recommendation + prompt-adapter endpoints
+- Adapter unit tests
 - Docker + GitHub Actions CI
 
 ## Showcase
@@ -22,6 +23,23 @@ MuseForge is a structured prompt-engineering project for **AI beauty portrait cr
 ![MuseForge 50 Beauty Styles](./assets/showcase/catalog/museforge-50-styles.jpg)
 
 The first 50 concepts use the optimized visual sprite above. Concepts 51–100 are already available as structured prompts and currently use category-themed placeholders in the Web Gallery; dedicated showcase imagery can be added progressively without bloating the repository.
+
+## Prompt Adapter
+
+MuseForge uses a canonical prompt as its internal representation:
+
+```text
+Gallery / Prompt Builder
+        ↓
+Canonical MuseForge Prompt
+        ↓
+┌─────────┬─────────────┬────────┬──────────────────┐
+Generic   Midjourney    FLUX     Stable Diffusion
+```
+
+The adapters intentionally do **not** pin provider model versions. They provide readable, portable starting points rather than assuming one provider version, checkpoint, or hosted UI.
+
+See [Prompt Model Adapters](./docs/MODEL_ADAPTERS.md).
 
 ## Category tree
 
@@ -47,18 +65,21 @@ Then open:
 - API docs: http://localhost:8000/docs
 - Gallery API: http://localhost:8000/api/v1/gallery
 
-## Gallery API
+## API
 
 ```text
-GET /api/v1/gallery
-GET /api/v1/gallery?group=fantasy-sci-fi
-GET /api/v1/gallery?category=cultural
-GET /api/v1/gallery?q=cyber
-GET /api/v1/gallery/categories
-GET /api/v1/gallery/random
-GET /api/v1/gallery/random?category=fantasy
-GET /api/v1/gallery/44-cyberpunk
-GET /api/v1/gallery/44-cyberpunk/similar?limit=4
+GET  /api/v1/gallery
+GET  /api/v1/gallery?group=fantasy-sci-fi
+GET  /api/v1/gallery?category=cultural
+GET  /api/v1/gallery?q=cyber
+GET  /api/v1/gallery/categories
+GET  /api/v1/gallery/random
+GET  /api/v1/gallery/44-cyberpunk
+GET  /api/v1/gallery/44-cyberpunk/similar?limit=4
+
+GET  /api/v1/prompt/models
+POST /api/v1/prompt/adapt
+POST /api/v1/prompt/adapt-all
 POST /api/v1/prompt/generate
 ```
 
@@ -75,34 +96,19 @@ MuseForge/
 └── web/                 # React + TypeScript Web Studio
 ```
 
-## Data model
+## Data
 
-Each Gallery concept carries:
+The Gallery source of truth is [dataset/gallery_manifest.json](./dataset/gallery_manifest.json).
 
-```text
-id / index
-title
-group / category
-tags
-adult_subject
-has_visual
-prompt
-negative_prompt
-recommended.aspect_ratio
-recommended.framing
-recommended.lighting
-```
-
-See [dataset/gallery_manifest.json](./dataset/gallery_manifest.json).
+Prompt adapter metadata lives in [dataset/model_adapters.json](./dataset/model_adapters.json).
 
 ## Roadmap
 
 - Add dedicated optimized images for concepts 51–100
 - Grow to 200+ carefully curated prompt concepts
-- Add model adapters for Midjourney, Stable Diffusion, Flux, and other image models
 - Add vector similarity search and recommendation explanations
 - Add favorites / collections
-- Add schema validation and API tests
+- Add API integration tests and JSON Schema validation
 - Add community submissions and moderation workflow
 
 ## Contributing

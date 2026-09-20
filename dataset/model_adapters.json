@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "adapters": [
+    {
+      "id": "generic",
+      "label": "Generic",
+      "strategy": "portable baseline",
+      "negative_prompt": "separate",
+      "version_pinned": false
+    },
+    {
+      "id": "midjourney",
+      "label": "Midjourney",
+      "strategy": "portable parameters",
+      "negative_prompt": "mapped to --no",
+      "version_pinned": false,
+      "defaults": {
+        "stylize": 150
+      }
+    },
+    {
+      "id": "flux",
+      "label": "FLUX",
+      "strategy": "descriptive natural language",
+      "negative_prompt": "folded into instruction",
+      "version_pinned": false
+    },
+    {
+      "id": "stable-diffusion",
+      "label": "Stable Diffusion",
+      "strategy": "positive + negative prompts",
+      "negative_prompt": "separate",
+      "version_pinned": false,
+      "defaults": {
+        "steps_hint": 28,
+        "cfg_scale_hint": 6.5
+      }
+    }
+  ]
+}

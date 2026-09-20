@@ -1,3 +1,13 @@
+export type PromptModel = "generic" | "midjourney" | "flux" | "stable-diffusion";
+
+export interface AdaptedPrompt {
+  model: PromptModel;
+  prompt: string;
+  negative_prompt: string;
+  parameters: Record<string, string | number>;
+  notes: string[];
+}
+
 export interface GalleryRecommended {
   aspect_ratio: string;
   framing: string;
