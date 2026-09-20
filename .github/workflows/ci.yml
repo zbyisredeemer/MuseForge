@@ -5,12 +5,48 @@ on:
   pull_request:
 
 jobs:
-  validate:
+  web:
+    name: Web build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate project structure
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package.json
+      - name: Install frontend dependencies
+        working-directory: web
+        run: npm install
+      - name: Typecheck and build
+        working-directory: web
+        run: npm run build
+
+  api:
+    name: API validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install API dependencies
+        run: pip install -r backend/requirements.txt
+      - name: Compile Python
+        run: python -m compileall backend app
+      - name: Validate gallery manifest
         run: |
-          echo "MuseForge CI validation"
-          test -d dataset || true
-          test -d docs || true
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path(".")
+          source = json.loads((root / "dataset/gallery_manifest.json").read_text())
+          assert source["catalog"]["item_count"] == 50
+          assert len(source["items"]) == 50
+          assert all(item.get("adult_subject") is True for item in source["items"])
+          assert (root / "web/public/gallery_manifest.json").read_bytes() == (root / "dataset/gallery_manifest.json").read_bytes()
+          assert (root / "backend/data/gallery_manifest.json").read_bytes() == (root / "dataset/gallery_manifest.json").read_bytes()
+          print("Gallery manifest OK")
+          PY

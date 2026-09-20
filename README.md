@@ -4,13 +4,13 @@
 
 MuseForge focuses on one thing: **building better prompts for AI beauty portrait creation**.
 
-It combines structured beauty attributes, cultural and fashion references, clothing, scenes, seasons, poses, lighting, camera language, and reusable prompt examples into an open dataset and prompt-generation toolkit.
+It combines structured appearance attributes, cultural and fashion references, clothing, scenes, seasons, poses, lighting, camera language, and reusable prompt examples into an open dataset, API, and visual prompt studio.
 
 ## Showcase
 
 ![MuseForge 50 Beauty Styles](./assets/showcase/catalog/museforge-50-styles.jpg)
 
-The gallery currently organizes **50 beauty concepts** across cultural fashion, modern style, seasonal scenes, professional portraits, lifestyle, fantasy, and science fiction.
+The Gallery currently contains **50 fictional adult beauty concepts** across cultural fashion, modern style, seasonal scenes, professional portraits, lifestyle, fantasy, illustration, and science fiction.
 
 | Chinese Hanfu | Japanese Kimono | French Elegance |
 | --- | --- | --- |
@@ -21,6 +21,18 @@ The gallery currently organizes **50 beauty concepts** across cultural fashion, 
 | ![](./assets/showcase/italian_luxury_beauty.jpg) | ![](./assets/showcase/fantasy_goddess.jpg) | ![](./assets/showcase/cyber_beauty.jpg) |
 
 See the [Gallery Guide](./docs/GALLERY.md) and the machine-readable [Gallery Manifest](./dataset/gallery_manifest.json).
+
+## What works now
+
+- ✅ 50-style visual Gallery dataset
+- ✅ Searchable/filterable React Gallery
+- ✅ Gallery detail view with prompt and negative prompt
+- ✅ One-click prompt copy
+- ✅ Send Gallery concepts into Prompt Studio
+- ✅ FastAPI Gallery endpoints
+- ✅ Prompt generation MVP endpoint
+- ✅ Docker setup for API + Web
+- ✅ CI validation for frontend, backend, and manifest consistency
 
 ## Core dimensions
 
@@ -34,31 +46,69 @@ See the [Gallery Guide](./docs/GALLERY.md) and the machine-readable [Gallery Man
 - Fantasy, illustration, and sci-fi styles
 - Prompt generation and recommendation
 
-## Vision
+## Quick start
 
-Build an open, structured knowledge base for AI beauty prompt engineering: easy to browse, easy to combine, easy to extend, and useful across image-generation models.
+### Docker
+
+```bash
+docker compose up --build
+```
+
+Then open:
+
+- Web Studio: http://localhost:3000
+- API health: http://localhost:8000/health
+- API docs: http://localhost:8000/docs
+- Gallery API: http://localhost:8000/api/v1/gallery
+
+### Web only
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+### API only
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
+
+## API examples
+
+```text
+GET /api/v1/gallery
+GET /api/v1/gallery?category=fantasy
+GET /api/v1/gallery?q=cyber
+GET /api/v1/gallery/44-cyberpunk
+POST /api/v1/prompt/generate
+```
 
 ## Project structure
 
 ```text
 MuseForge/
-├── assets/showcase/     # Web-optimized gallery previews
-├── dataset/             # Structured beauty/prompt datasets
+├── assets/showcase/     # Repository showcase images
+├── dataset/             # Source-of-truth prompt datasets
 ├── examples/            # Prompt examples
 ├── docs/                # Architecture and contribution docs
-├── backend/             # API service
+├── backend/             # FastAPI service
 ├── app/                 # Prompt engine modules
-└── web/                 # Web Studio
+└── web/                 # React + TypeScript Web Studio
 ```
 
 ## Roadmap
 
-- Expand the gallery and prompt dataset
-- Connect Dataset Loader to all APIs
-- Complete the Web Studio and Gallery
-- Add recommendation and search
-- Add model-specific output for Midjourney, Stable Diffusion, Flux, and other image models
-- Improve schema validation and automated testing
+- Expand from 50 to 100+ curated gallery concepts
+- Replace sprite-only previews with individually versioned showcase assets where useful
+- Connect all prompt dimensions to the generator
+- Add recommendation, similarity search, and favorites
+- Add model-specific prompt adapters for Midjourney, Stable Diffusion, Flux, and other image models
+- Add schema validation, API tests, and visual regression tests
+- Add community submissions and moderation workflow
 
 ## Contributing
 
@@ -66,7 +116,7 @@ Contributions are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) and 
 
 ## Gallery note
 
-Showcase people are fictional AI-generated adults. Cultural or geographic labels are prompt inspiration dimensions rather than claims about how people from a place or culture look.
+Showcase people are fictional AI-generated adults. Cultural or geographic labels are prompt inspiration dimensions rather than claims about how people from a place, culture, or ethnicity look.
 
 ## License
 
