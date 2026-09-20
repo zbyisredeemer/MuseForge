@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Gallery from "./components/Gallery";
+import Gallery from "./components/GalleryV2";
 import PromptBuilder from "./components/PromptBuilder";
 import type { GalleryItem } from "./types";
 
