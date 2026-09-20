@@ -1,0 +1,524 @@
+{
+  "version": 1,
+  "title": "MuseForge Beauty Gallery",
+  "description": "A structured catalog of AI-generated fictional adult beauty concepts for prompt-engineering demos.",
+  "catalog": {
+    "image": "assets/showcase/catalog/museforge-50-styles.jpg",
+    "rows": 5,
+    "columns": 10,
+    "item_count": 50
+  },
+  "notes": [
+    "All depicted people are fictional AI-generated adults.",
+    "Country and cultural labels are visual inspiration tags, not claims that a nationality, ethnicity, or culture has one appearance.",
+    "Keep repository images web-optimized; store prompt metadata separately from binary assets."
+  ],
+  "items": [
+    {
+      "id": "01-chinese-hanfu",
+      "index": 1,
+      "title": "Chinese Hanfu",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 1,
+        "column": 1
+      },
+      "image": "assets/showcase/chinese_hanfu_beauty.jpg"
+    },
+    {
+      "id": "02-japanese-kimono",
+      "index": 2,
+      "title": "Japanese Kimono",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 1,
+        "column": 2
+      },
+      "image": "assets/showcase/japanese_kimono_beauty.jpg"
+    },
+    {
+      "id": "03-korean-modern",
+      "index": 3,
+      "title": "Korean Modern",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 1,
+        "column": 3
+      }
+    },
+    {
+      "id": "04-french-elegance",
+      "index": 4,
+      "title": "French Elegance",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 1,
+        "column": 4
+      },
+      "image": "assets/showcase/french_elegant_beauty.jpg"
+    },
+    {
+      "id": "05-italian-luxury",
+      "index": 5,
+      "title": "Italian Luxury",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 1,
+        "column": 5
+      },
+      "image": "assets/showcase/italian_luxury_beauty.jpg"
+    },
+    {
+      "id": "06-american-street",
+      "index": 6,
+      "title": "American Street",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 1,
+        "column": 6
+      }
+    },
+    {
+      "id": "07-indian-sari",
+      "index": 7,
+      "title": "Indian Sari",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 1,
+        "column": 7
+      }
+    },
+    {
+      "id": "08-arabian-beauty",
+      "index": 8,
+      "title": "Arabian Beauty",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 1,
+        "column": 8
+      }
+    },
+    {
+      "id": "09-british-classic",
+      "index": 9,
+      "title": "British Classic",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 1,
+        "column": 9
+      }
+    },
+    {
+      "id": "10-german-dirndl",
+      "index": 10,
+      "title": "German Dirndl",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 1,
+        "column": 10
+      }
+    },
+    {
+      "id": "11-russian-winter",
+      "index": 11,
+      "title": "Russian Winter",
+      "category": "seasonal",
+      "catalog_cell": {
+        "row": 2,
+        "column": 1
+      }
+    },
+    {
+      "id": "12-nordic-style",
+      "index": 12,
+      "title": "Nordic Style",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 2,
+        "column": 2
+      }
+    },
+    {
+      "id": "13-spanish-flamenco",
+      "index": 13,
+      "title": "Spanish Flamenco",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 2,
+        "column": 3
+      }
+    },
+    {
+      "id": "14-brazilian-beach",
+      "index": 14,
+      "title": "Brazilian Beach",
+      "category": "lifestyle",
+      "catalog_cell": {
+        "row": 2,
+        "column": 4
+      }
+    },
+    {
+      "id": "15-mexican-tradition",
+      "index": 15,
+      "title": "Mexican Tradition",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 2,
+        "column": 5
+      }
+    },
+    {
+      "id": "16-egyptian-queen",
+      "index": 16,
+      "title": "Egyptian Queen",
+      "category": "fantasy-history",
+      "catalog_cell": {
+        "row": 2,
+        "column": 6
+      }
+    },
+    {
+      "id": "17-african-heritage",
+      "index": 17,
+      "title": "African Heritage",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 2,
+        "column": 7
+      }
+    },
+    {
+      "id": "18-turkish-charm",
+      "index": 18,
+      "title": "Turkish Charm",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 2,
+        "column": 8
+      }
+    },
+    {
+      "id": "19-greek-goddess",
+      "index": 19,
+      "title": "Greek Goddess",
+      "category": "fantasy-history",
+      "catalog_cell": {
+        "row": 2,
+        "column": 9
+      }
+    },
+    {
+      "id": "20-dutch-tulip",
+      "index": 20,
+      "title": "Dutch Tulip",
+      "category": "seasonal",
+      "catalog_cell": {
+        "row": 2,
+        "column": 10
+      }
+    },
+    {
+      "id": "21-vietnamese-ao-dai",
+      "index": 21,
+      "title": "Vietnamese Ao Dai",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 3,
+        "column": 1
+      }
+    },
+    {
+      "id": "22-thai-traditional",
+      "index": 22,
+      "title": "Thai Traditional",
+      "category": "cultural",
+      "catalog_cell": {
+        "row": 3,
+        "column": 2
+      }
+    },
+    {
+      "id": "23-indonesian-beauty",
+      "index": 23,
+      "title": "Indonesian Beauty",
+      "category": "lifestyle",
+      "catalog_cell": {
+        "row": 3,
+        "column": 3
+      }
+    },
+    {
+      "id": "24-malaysian-modern",
+      "index": 24,
+      "title": "Malaysian Modern",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 3,
+        "column": 4
+      }
+    },
+    {
+      "id": "25-singapore-urban",
+      "index": 25,
+      "title": "Singapore Urban",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 3,
+        "column": 5
+      }
+    },
+    {
+      "id": "26-philippine-beauty",
+      "index": 26,
+      "title": "Philippine Beauty",
+      "category": "lifestyle",
+      "catalog_cell": {
+        "row": 3,
+        "column": 6
+      }
+    },
+    {
+      "id": "27-australian-sunshine",
+      "index": 27,
+      "title": "Australian Sunshine",
+      "category": "lifestyle",
+      "catalog_cell": {
+        "row": 3,
+        "column": 7
+      }
+    },
+    {
+      "id": "28-new-zealand-nature",
+      "index": 28,
+      "title": "New Zealand Nature",
+      "category": "lifestyle",
+      "catalog_cell": {
+        "row": 3,
+        "column": 8
+      }
+    },
+    {
+      "id": "29-canadian-winter",
+      "index": 29,
+      "title": "Canadian Winter",
+      "category": "seasonal",
+      "catalog_cell": {
+        "row": 3,
+        "column": 9
+      }
+    },
+    {
+      "id": "30-irish-countryside",
+      "index": 30,
+      "title": "Irish Countryside",
+      "category": "lifestyle",
+      "catalog_cell": {
+        "row": 3,
+        "column": 10
+      }
+    },
+    {
+      "id": "31-office-lady",
+      "index": 31,
+      "title": "Office Lady",
+      "category": "professional",
+      "catalog_cell": {
+        "row": 4,
+        "column": 1
+      }
+    },
+    {
+      "id": "32-teacher",
+      "index": 32,
+      "title": "Teacher",
+      "category": "professional",
+      "catalog_cell": {
+        "row": 4,
+        "column": 2
+      }
+    },
+    {
+      "id": "33-nurse",
+      "index": 33,
+      "title": "Nurse",
+      "category": "professional",
+      "catalog_cell": {
+        "row": 4,
+        "column": 3
+      }
+    },
+    {
+      "id": "34-flight-attendant",
+      "index": 34,
+      "title": "Flight Attendant",
+      "category": "professional",
+      "catalog_cell": {
+        "row": 4,
+        "column": 4
+      }
+    },
+    {
+      "id": "35-police-woman",
+      "index": 35,
+      "title": "Police Woman",
+      "category": "professional",
+      "catalog_cell": {
+        "row": 4,
+        "column": 5
+      }
+    },
+    {
+      "id": "36-military-style",
+      "index": 36,
+      "title": "Military Style",
+      "category": "professional",
+      "catalog_cell": {
+        "row": 4,
+        "column": 6
+      }
+    },
+    {
+      "id": "37-sports-fitness",
+      "index": 37,
+      "title": "Sports Fitness",
+      "category": "fitness",
+      "catalog_cell": {
+        "row": 4,
+        "column": 7
+      }
+    },
+    {
+      "id": "38-swimsuit",
+      "index": 38,
+      "title": "Swimsuit",
+      "category": "lifestyle",
+      "catalog_cell": {
+        "row": 4,
+        "column": 8
+      }
+    },
+    {
+      "id": "39-lingerie",
+      "index": 39,
+      "title": "Lingerie",
+      "category": "fashion",
+      "catalog_cell": {
+        "row": 4,
+        "column": 9
+      }
+    },
+    {
+      "id": "40-nightclub",
+      "index": 40,
+      "title": "Nightclub",
+      "category": "nightlife",
+      "catalog_cell": {
+        "row": 4,
+        "column": 10
+      }
+    },
+    {
+      "id": "41-fantasy-elf",
+      "index": 41,
+      "title": "Fantasy Elf",
+      "category": "fantasy",
+      "catalog_cell": {
+        "row": 5,
+        "column": 1
+      }
+    },
+    {
+      "id": "42-angel",
+      "index": 42,
+      "title": "Angel",
+      "category": "fantasy",
+      "catalog_cell": {
+        "row": 5,
+        "column": 2
+      },
+      "image": "assets/showcase/fantasy_goddess.jpg"
+    },
+    {
+      "id": "43-demon",
+      "index": 43,
+      "title": "Demon",
+      "category": "fantasy",
+      "catalog_cell": {
+        "row": 5,
+        "column": 3
+      }
+    },
+    {
+      "id": "44-cyberpunk",
+      "index": 44,
+      "title": "Cyberpunk",
+      "category": "sci-fi",
+      "catalog_cell": {
+        "row": 5,
+        "column": 4
+      },
+      "image": "assets/showcase/cyber_beauty.jpg"
+    },
+    {
+      "id": "45-steampunk",
+      "index": 45,
+      "title": "Steampunk",
+      "category": "fantasy",
+      "catalog_cell": {
+        "row": 5,
+        "column": 5
+      }
+    },
+    {
+      "id": "46-witch",
+      "index": 46,
+      "title": "Witch",
+      "category": "fantasy",
+      "catalog_cell": {
+        "row": 5,
+        "column": 6
+      }
+    },
+    {
+      "id": "47-princess",
+      "index": 47,
+      "title": "Princess",
+      "category": "fantasy",
+      "catalog_cell": {
+        "row": 5,
+        "column": 7
+      }
+    },
+    {
+      "id": "48-cyber-ai",
+      "index": 48,
+      "title": "Cyber AI",
+      "category": "sci-fi",
+      "catalog_cell": {
+        "row": 5,
+        "column": 8
+      }
+    },
+    {
+      "id": "49-anime-style",
+      "index": 49,
+      "title": "Anime Style",
+      "category": "illustration",
+      "catalog_cell": {
+        "row": 5,
+        "column": 9
+      }
+    },
+    {
+      "id": "50-future-soldier",
+      "index": 50,
+      "title": "Future Soldier",
+      "category": "sci-fi",
+      "catalog_cell": {
+        "row": 5,
+        "column": 10
+      }
+    }
+  ]
+}
