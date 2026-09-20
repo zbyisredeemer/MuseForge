@@ -38,14 +38,14 @@ export default function App() {
             <span className="eyebrow">OPEN-SOURCE PROMPT ENGINEERING</span>
             <h1>Explore a visual language for AI beauty portraits.</h1>
             <p>
-              Browse 50 curated concepts, inspect their prompt structure, and send any style directly
-              into the Studio for remixing.
+              Browse 100 curated concepts, discover related styles, and send any prompt directly into
+              the Studio for remixing.
             </p>
           </div>
           <div className="hero-stats">
-            <div><strong>50</strong><span>visual concepts</span></div>
-            <div><strong>10+</strong><span>style categories</span></div>
-            <div><strong>1 click</strong><span>to copy prompts</span></div>
+            <div><strong>100</strong><span>prompt concepts</span></div>
+            <div><strong>5</strong><span>category groups</span></div>
+            <div><strong>1 click</strong><span>to remix</span></div>
           </div>
         </section>
 

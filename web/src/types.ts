@@ -4,14 +4,22 @@ export interface GalleryRecommended {
   lighting: string;
 }
 
+export interface GalleryCategoryGroup {
+  id: string;
+  label: string;
+  categories: string[];
+}
+
 export interface GalleryItem {
   id: string;
   index: number;
   title: string;
   category: string;
+  group: string;
   tags: string[];
   adult_subject: boolean;
-  catalog_cell: {
+  has_visual: boolean;
+  catalog_cell?: {
     row: number;
     column: number;
   };
@@ -24,12 +32,15 @@ export interface GalleryManifest {
   version: number;
   title: string;
   description: string;
+  item_count: number;
   catalog: {
     image: string;
     rows: number;
     columns: number;
     item_count: number;
+    note?: string;
   };
+  category_tree: GalleryCategoryGroup[];
   safety: {
     adult_subjects_only: boolean;
     note: string;

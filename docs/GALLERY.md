@@ -1,30 +1,44 @@
 # MuseForge Gallery
 
-MuseForge maintains a visual showcase alongside the structured prompt dataset.
+The MuseForge Gallery is the visual and searchable entry point to the prompt dataset.
 
-![MuseForge 50 Beauty Styles](../assets/showcase/catalog/museforge-50-styles.jpg)
+## Current catalog
 
-## Catalog
+- 100 structured prompt concepts
+- 50 concepts with optimized image previews
+- 50 prompt-first concepts with category placeholders
+- 5 category groups
+- Search, random discovery, and similarity recommendations
 
-The current catalog contains **50 visual concepts** spanning cultural clothing, modern fashion, seasons, lifestyle, professions, fantasy, and science fiction.
+The source of truth is `dataset/gallery_manifest.json`. Copies under `web/public/` and `backend/data/` are validated by CI.
 
-Machine-readable metadata lives in [`dataset/gallery_manifest.json`](../dataset/gallery_manifest.json). Each entry stores its catalog row/column so the catalog can later be rendered as a sprite sheet in the Web Gallery.
+## Category tree
 
-## Featured standalone images
+1. **Culture & Heritage** — cultural and historically inspired concepts.
+2. **Fashion & Lifestyle** — fashion, seasonal, fitness, nightlife, and everyday editorial concepts.
+3. **Professional** — respectful fictional professional portraits.
+4. **Art & Era** — illustration, fine-art, and period-inspired visual languages.
+5. **Fantasy & Sci-Fi** — fantasy and speculative future concepts.
 
-The repository also keeps selected standalone previews under `assets/showcase/`:
+## Recommendation logic
 
-- Chinese Hanfu Beauty
-- Japanese Kimono Beauty
-- French Elegant Beauty
-- Italian Luxury Beauty
-- Fantasy Goddess
-- Cyber Beauty
+The current similarity engine is intentionally transparent:
 
-## Asset policy
+- same category: +5
+- same top-level group: +3
+- each exact shared tag: +2
 
-Showcase assets committed to Git are web-optimized previews rather than full-resolution generation outputs. This keeps clone size under control while preserving enough visual detail for README, documentation, and the Web Gallery.
+This is a deterministic baseline that can later be replaced or complemented by embeddings.
 
-All people shown in the gallery are fictional AI-generated adults. Cultural and geographic labels are creative prompt dimensions and should not be interpreted as a definition of how people from a culture, country, or ethnicity look.
+## Asset strategy
 
-When contributing a new gallery item, add or update its metadata in `dataset/gallery_manifest.json`, use a descriptive lower-case filename, and keep the preview optimized for the web.
+Do not commit every full-resolution generation to Git.
+
+- Keep web-optimized showcase previews in `assets/showcase/`.
+- Use sprite catalogs for large batches.
+- Add individual assets for high-value featured examples.
+- Keep prompts and metadata in JSON, not embedded in image files.
+
+## Safety and representation
+
+All human subjects in the Gallery are fictional AI-generated adults. Cultural and geographic tags are creative dimensions, not a claim that a group has one appearance. Contributions should avoid stereotyping, sexualization of minors, explicit sexual content, and misleading real-world uniforms or insignia.

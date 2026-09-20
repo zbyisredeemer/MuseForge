@@ -1,12 +1,13 @@
 {
-  "version": 2,
+  "version": 3,
   "title": "MuseForge Beauty Gallery",
   "description": "A structured catalog of AI-generated fictional adult beauty concepts for prompt-engineering demos.",
   "catalog": {
     "image": "assets/showcase/catalog/museforge-50-styles.jpg",
     "rows": 5,
     "columns": 10,
-    "item_count": 50
+    "item_count": 50,
+    "note": "Sprite catalog covers items 1-50. Items 51-100 currently use generated category placeholders until dedicated showcase images are added."
   },
   "safety": {
     "adult_subjects_only": true,
@@ -35,7 +36,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "02-japanese-kimono",
@@ -59,7 +62,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "03-korean-modern",
@@ -83,7 +88,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "04-french-elegance",
@@ -107,7 +114,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "05-italian-luxury",
@@ -131,7 +140,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "06-american-street",
@@ -155,7 +166,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "07-indian-sari",
@@ -179,7 +192,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "08-arabian-beauty",
@@ -203,7 +218,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "09-british-classic",
@@ -227,7 +244,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "10-german-dirndl",
@@ -251,7 +270,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "11-russian-winter",
@@ -275,7 +296,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "12-nordic-style",
@@ -299,7 +322,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "13-spanish-flamenco",
@@ -323,7 +348,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "14-brazilian-beach",
@@ -347,7 +374,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "15-mexican-tradition",
@@ -371,7 +400,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "16-egyptian-queen",
@@ -395,7 +426,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "17-african-heritage",
@@ -419,7 +452,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "18-turkish-charm",
@@ -443,7 +478,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "19-greek-goddess",
@@ -467,7 +504,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "20-dutch-tulip",
@@ -491,7 +530,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "21-vietnamese-ao-dai",
@@ -515,7 +556,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "22-thai-traditional",
@@ -539,7 +582,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "culture",
+      "has_visual": true
     },
     {
       "id": "23-indonesian-beauty",
@@ -563,7 +608,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "24-malaysian-modern",
@@ -587,7 +634,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "25-singapore-urban",
@@ -611,7 +660,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "26-philippine-beauty",
@@ -635,7 +686,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "27-australian-sunshine",
@@ -659,7 +712,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "28-new-zealand-nature",
@@ -683,7 +738,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "29-canadian-winter",
@@ -707,7 +764,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "30-irish-countryside",
@@ -731,7 +790,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "31-office-lady",
@@ -755,7 +816,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "professional",
+      "has_visual": true
     },
     {
       "id": "32-teacher",
@@ -779,7 +842,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "professional",
+      "has_visual": true
     },
     {
       "id": "33-nurse",
@@ -803,7 +868,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "professional",
+      "has_visual": true
     },
     {
       "id": "34-flight-attendant",
@@ -827,7 +894,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "professional",
+      "has_visual": true
     },
     {
       "id": "35-police-woman",
@@ -851,7 +920,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "professional",
+      "has_visual": true
     },
     {
       "id": "36-military-style",
@@ -875,7 +946,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "professional",
+      "has_visual": true
     },
     {
       "id": "37-sports-fitness",
@@ -899,7 +972,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter action portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "38-swimsuit",
@@ -923,7 +998,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "39-lingerie",
@@ -947,7 +1024,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "40-nightclub",
@@ -971,7 +1050,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "cinematic mixed lighting"
-      }
+      },
+      "group": "fashion-lifestyle",
+      "has_visual": true
     },
     {
       "id": "41-fantasy-elf",
@@ -995,7 +1076,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "42-angel",
@@ -1019,7 +1102,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "43-demon",
@@ -1043,7 +1128,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "44-cyberpunk",
@@ -1067,7 +1154,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "cinematic mixed lighting"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "45-steampunk",
@@ -1091,7 +1180,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "46-witch",
@@ -1115,7 +1206,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "47-princess",
@@ -1139,7 +1232,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "48-cyber-ai",
@@ -1163,7 +1258,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "cinematic mixed lighting"
-      }
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
     },
     {
       "id": "49-anime-style",
@@ -1187,7 +1284,9 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "soft cinematic light"
-      }
+      },
+      "group": "art-era",
+      "has_visual": true
     },
     {
       "id": "50-future-soldier",
@@ -1211,7 +1310,1155 @@
         "aspect_ratio": "4:5",
         "framing": "three-quarter portrait",
         "lighting": "cinematic mixed lighting"
+      },
+      "group": "fantasy-sci-fi",
+      "has_visual": true
+    },
+    {
+      "id": "51-chinese-cheongsam",
+      "index": 51,
+      "title": "Chinese Cheongsam",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "China",
+        "cheongsam",
+        "Shanghai",
+        "elegant"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing an elegant cheongsam in a refined old-Shanghai-inspired interior, tasteful tailoring and restrained accessories, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
       }
+    },
+    {
+      "id": "52-japanese-modern-street",
+      "index": 52,
+      "title": "Japanese Modern Street",
+      "category": "fashion",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Japan",
+        "Tokyo",
+        "street fashion",
+        "modern"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in polished contemporary Tokyo street fashion at a clean city crossing, subtle layered styling, high-end fashion editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "53-korean-hanbok",
+      "index": 53,
+      "title": "Korean Hanbok",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Korea",
+        "hanbok",
+        "traditional",
+        "palace"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing a refined hanbok in a quiet palace courtyard, graceful posture and soft seasonal atmosphere, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "54-moroccan-courtyard",
+      "index": 54,
+      "title": "Moroccan Courtyard",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Morocco",
+        "riad",
+        "caftan",
+        "mosaic"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing an elegant caftan-inspired outfit in a tiled riad courtyard, warm filtered sunlight, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "55-persian-elegance",
+      "index": 55,
+      "title": "Persian Elegance",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Persian",
+        "textile",
+        "garden",
+        "ornament"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in Persian-inspired formal fashion with intricate textile details, garden architecture and soft evening light, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "56-mongolian-steppe",
+      "index": 56,
+      "title": "Mongolian Steppe",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Mongolia",
+        "deel",
+        "steppe",
+        "wind"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing a refined deel-inspired outfit on an open steppe, windswept fabric and broad natural landscape, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "57-tibetan-plateau-style",
+      "index": 57,
+      "title": "Tibetan Plateau Style",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Tibetan inspired",
+        "plateau",
+        "textiles",
+        "mountains"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in respectful plateau-inspired layered textiles with mountain scenery, documentary-fashion portrait mood, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "58-nepalese-heritage",
+      "index": 58,
+      "title": "Nepalese Heritage",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Nepal",
+        "heritage",
+        "Kathmandu",
+        "textiles"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in heritage-inspired formal clothing within a historic courtyard, warm daylight and detailed textiles, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "59-sri-lankan-saree",
+      "index": 59,
+      "title": "Sri Lankan Saree",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Sri Lanka",
+        "saree",
+        "tropical",
+        "heritage"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing an elegant saree-inspired ensemble in a tropical heritage setting, soft luminous daylight, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "60-cambodian-silk",
+      "index": 60,
+      "title": "Cambodian Silk",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Cambodia",
+        "silk",
+        "Khmer inspired",
+        "temple"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing refined silk ceremonial-inspired fashion near historic stone architecture, golden ambient light, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "61-laotian-sinh",
+      "index": 61,
+      "title": "Laotian Sinh",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Laos",
+        "sinh",
+        "silk",
+        "traditional"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing a refined sinh-inspired silk outfit in a calm riverside heritage setting, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "62-burmese-longyi",
+      "index": 62,
+      "title": "Burmese Longyi",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Myanmar",
+        "longyi",
+        "heritage",
+        "golden hour"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in elegant longyi-inspired styling beside traditional architecture, warm golden-hour portrait light, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "63-georgian-traditional",
+      "index": 63,
+      "title": "Georgian Traditional",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Georgia",
+        "Caucasus",
+        "traditional",
+        "mountains"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in refined Georgian-inspired traditional fashion against a dramatic Caucasus mountain backdrop, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "64-romanian-folk",
+      "index": 64,
+      "title": "Romanian Folk",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Romania",
+        "folk",
+        "embroidery",
+        "countryside"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, wearing tasteful Romanian folk-inspired embroidery in a bright countryside setting, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "65-polish-folk",
+      "index": 65,
+      "title": "Polish Folk",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Poland",
+        "folk",
+        "floral",
+        "heritage"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in elegant Polish folk-inspired clothing with floral embroidery, soft village daylight, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "66-portuguese-azulejo",
+      "index": 66,
+      "title": "Portuguese Azulejo",
+      "category": "fashion",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Portugal",
+        "Lisbon",
+        "azulejo",
+        "fashion"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in contemporary elegant fashion beside blue azulejo tiles on a Lisbon street, high-end fashion editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "67-swiss-alpine",
+      "index": 67,
+      "title": "Swiss Alpine",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Switzerland",
+        "alpine",
+        "winter",
+        "luxury"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in refined alpine winter fashion near a quiet chalet, crisp mountain daylight, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "68-austrian-ball",
+      "index": 68,
+      "title": "Austrian Ball",
+      "category": "retro",
+      "group": "art-era",
+      "tags": [
+        "Austria",
+        "Vienna",
+        "ball gown",
+        "classical"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in a sophisticated formal ball gown inside a grand Viennese-inspired hall, chandelier light, cinematic period-inspired editorial portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "69-icelandic-winter",
+      "index": 69,
+      "title": "Icelandic Winter",
+      "category": "seasonal",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Iceland",
+        "winter",
+        "wool",
+        "landscape"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in layered wool fashion against a stark Icelandic winter landscape, soft overcast light, cinematic seasonal portrait photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "70-finnish-nordic",
+      "index": 70,
+      "title": "Finnish Nordic",
+      "category": "fashion",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Finland",
+        "Nordic",
+        "minimal",
+        "winter"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in clean Finnish-inspired winter minimalism, pale architecture and quiet diffused light, high-end fashion editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "71-danish-minimal",
+      "index": 71,
+      "title": "Danish Minimal",
+      "category": "fashion",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Denmark",
+        "Copenhagen",
+        "minimal",
+        "design"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in Danish-inspired minimalist fashion within a modern design district, soft neutral daylight, high-end fashion editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "72-swedish-midsummer",
+      "index": 72,
+      "title": "Swedish Midsummer",
+      "category": "seasonal",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Sweden",
+        "midsummer",
+        "flowers",
+        "summer"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in refined summer fashion with a subtle floral crown in a bright Scandinavian meadow, cinematic seasonal portrait photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "73-norwegian-fjord",
+      "index": 73,
+      "title": "Norwegian Fjord",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Norway",
+        "fjord",
+        "outdoor",
+        "nature"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in elegant practical outdoor fashion overlooking a dramatic fjord, cool natural light, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "74-scottish-highland",
+      "index": 74,
+      "title": "Scottish Highland",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Scotland",
+        "highland",
+        "tartan",
+        "mist"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in contemporary tartan-inspired fashion on a misty Highland landscape, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "75-hawaiian-floral",
+      "index": 75,
+      "title": "Hawaiian Floral",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Hawaii",
+        "floral",
+        "tropical",
+        "sunset"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in tasteful tropical floral fashion at a coastal sunset, relaxed editorial mood, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "76-caribbean-resort",
+      "index": 76,
+      "title": "Caribbean Resort",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Caribbean",
+        "resort",
+        "summer",
+        "coastal"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in refined resort fashion on a breezy coastal terrace, bright natural light, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "77-argentine-tango",
+      "index": 77,
+      "title": "Argentine Tango",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Argentina",
+        "tango",
+        "Buenos Aires",
+        "dance"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in an elegant tango-inspired dress inside a historic Buenos Aires hall, poised dance movement, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "78-colombian-color",
+      "index": 78,
+      "title": "Colombian Color",
+      "category": "fashion",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Colombia",
+        "color",
+        "Cartagena",
+        "fashion"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in vibrant contemporary fashion on a colorful colonial street, warm tropical daylight, high-end fashion editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "79-peruvian-andes",
+      "index": 79,
+      "title": "Peruvian Andes",
+      "category": "cultural",
+      "group": "culture",
+      "tags": [
+        "Peru",
+        "Andes",
+        "textiles",
+        "mountains"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in respectful Andean-inspired textile fashion against a highland landscape, photorealistic cultural-fashion editorial, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "80-chilean-coastal",
+      "index": 80,
+      "title": "Chilean Coastal",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "Chile",
+        "coast",
+        "Valparaiso",
+        "urban"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in contemporary coastal fashion on a colorful hillside street, sea light and breeze, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "81-autumn-bookstore",
+      "index": 81,
+      "title": "Autumn Bookstore",
+      "category": "seasonal",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "autumn",
+        "bookstore",
+        "cozy",
+        "editorial"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in warm autumn layers inside an independent bookstore, amber window light and quiet mood, cinematic seasonal portrait photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "82-rainy-window",
+      "index": 82,
+      "title": "Rainy Window",
+      "category": "seasonal",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "rain",
+        "window",
+        "moody",
+        "portrait"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, beside a rain-covered window in understated fashion, reflective cinematic mood and soft side light, cinematic seasonal portrait photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "83-coffee-shop",
+      "index": 83,
+      "title": "Coffee Shop",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "coffee",
+        "cafe",
+        "casual",
+        "morning"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in refined casual fashion at a sunlit coffee shop, candid morning lifestyle portrait, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "84-museum-portrait",
+      "index": 84,
+      "title": "Museum Portrait",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "museum",
+        "art",
+        "minimal",
+        "gallery"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in elegant minimalist fashion inside a contemporary art museum, clean architectural composition, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "85-library-scholar",
+      "index": 85,
+      "title": "Library Scholar",
+      "category": "professional",
+      "group": "professional",
+      "tags": [
+        "library",
+        "scholar",
+        "books",
+        "academic"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in smart academic-inspired attire among tall library shelves, warm reading light, professional editorial portrait photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "86-garden-tea-party",
+      "index": 86,
+      "title": "Garden Tea Party",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "garden",
+        "tea",
+        "spring",
+        "pastel"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in graceful spring fashion at an elegant garden tea setting, soft floral background, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "87-golden-hour-rooftop",
+      "index": 87,
+      "title": "Golden Hour Rooftop",
+      "category": "lifestyle",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "rooftop",
+        "golden hour",
+        "city",
+        "fashion"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in modern fashion on a city rooftop at golden hour, warm rim light and skyline bokeh, natural lifestyle editorial photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "88-blue-hour-city",
+      "index": 88,
+      "title": "Blue Hour City",
+      "category": "nightlife",
+      "group": "fashion-lifestyle",
+      "tags": [
+        "blue hour",
+        "city",
+        "evening",
+        "editorial"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in sleek evening fashion during blue hour, glass architecture and cool city reflections, cinematic nightlife fashion photography, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "cinematic mixed lighting"
+      }
+    },
+    {
+      "id": "89-film-noir",
+      "index": 89,
+      "title": "Film Noir",
+      "category": "retro",
+      "group": "art-era",
+      "tags": [
+        "film noir",
+        "black and white",
+        "1940s",
+        "cinematic"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in a 1940s-inspired fictional noir portrait, dramatic shadow pattern, monochrome cinematic composition, cinematic period-inspired editorial portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "90-old-hollywood",
+      "index": 90,
+      "title": "Old Hollywood",
+      "category": "retro",
+      "group": "art-era",
+      "tags": [
+        "Hollywood",
+        "glamour",
+        "vintage",
+        "studio"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in old-Hollywood-inspired evening fashion, classic studio glamour lighting and timeless composition, cinematic period-inspired editorial portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "91-renaissance-muse",
+      "index": 91,
+      "title": "Renaissance Muse",
+      "category": "fine-art",
+      "group": "art-era",
+      "tags": [
+        "Renaissance",
+        "painting",
+        "museum",
+        "classical"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, as an adult Renaissance-inspired muse in historically inspired dress, painterly museum-quality composition, museum-quality fine-art portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "92-baroque-portrait",
+      "index": 92,
+      "title": "Baroque Portrait",
+      "category": "fine-art",
+      "group": "art-era",
+      "tags": [
+        "Baroque",
+        "dramatic light",
+        "painting",
+        "ornate"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in ornate Baroque-inspired formal fashion, dramatic chiaroscuro and painterly detail, museum-quality fine-art portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "93-art-nouveau",
+      "index": 93,
+      "title": "Art Nouveau",
+      "category": "fine-art",
+      "group": "art-era",
+      "tags": [
+        "Art Nouveau",
+        "floral",
+        "illustration",
+        "decorative"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in elegant Art Nouveau-inspired fashion with flowing botanical ornament and decorative composition, museum-quality fine-art portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "94-art-deco",
+      "index": 94,
+      "title": "Art Deco",
+      "category": "retro",
+      "group": "art-era",
+      "tags": [
+        "Art Deco",
+        "1920s inspired",
+        "geometry",
+        "luxury"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in sophisticated Art Deco-inspired evening fashion, geometric architecture and polished luxury lighting, cinematic period-inspired editorial portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "95-rococo-pastel",
+      "index": 95,
+      "title": "Rococo Pastel",
+      "category": "fine-art",
+      "group": "art-era",
+      "tags": [
+        "Rococo",
+        "pastel",
+        "ornate",
+        "painting"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in tasteful Rococo-inspired pastel formalwear, ornate salon backdrop and soft painterly light, museum-quality fine-art portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    },
+    {
+      "id": "96-solarpunk",
+      "index": 96,
+      "title": "Solarpunk",
+      "category": "sci-fi",
+      "group": "fantasy-sci-fi",
+      "tags": [
+        "solarpunk",
+        "green city",
+        "future",
+        "nature"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in optimistic solarpunk fashion within a lush renewable-energy city, bright natural-futuristic light, cinematic science-fiction portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "cinematic mixed lighting"
+      }
+    },
+    {
+      "id": "97-biopunk",
+      "index": 97,
+      "title": "Biopunk",
+      "category": "sci-fi",
+      "group": "fantasy-sci-fi",
+      "tags": [
+        "biopunk",
+        "organic tech",
+        "future",
+        "editorial"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in fictional biopunk fashion with subtle organic-tech design elements, moody laboratory-inspired editorial setting, cinematic science-fiction portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "cinematic mixed lighting"
+      }
+    },
+    {
+      "id": "98-space-opera",
+      "index": 98,
+      "title": "Space Opera",
+      "category": "sci-fi",
+      "group": "fantasy-sci-fi",
+      "tags": [
+        "space opera",
+        "cosmic",
+        "royal",
+        "sci-fi"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, as an adult space-opera heroine in elaborate fictional ceremonial attire, vast starship interior and cosmic light, cinematic science-fiction portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "cinematic mixed lighting"
+      }
+    },
+    {
+      "id": "99-lunar-colony",
+      "index": 99,
+      "title": "Lunar Colony",
+      "category": "sci-fi",
+      "group": "fantasy-sci-fi",
+      "tags": [
+        "moon",
+        "lunar colony",
+        "future",
+        "minimal"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, in sleek futuristic fashion inside a lunar habitat, moon surface visible through panoramic glass, cinematic science-fiction portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "cinematic mixed lighting"
+      }
+    },
+    {
+      "id": "100-oceanic-fantasy",
+      "index": 100,
+      "title": "Oceanic Fantasy",
+      "category": "fantasy",
+      "group": "fantasy-sci-fi",
+      "tags": [
+        "ocean",
+        "fantasy",
+        "pearlescent",
+        "mythic"
+      ],
+      "adult_subject": true,
+      "has_visual": false,
+      "prompt": "A fictional adult woman, as an adult oceanic fantasy figure in pearlescent flowing attire, luminous underwater-inspired environment, high-detail cinematic fantasy portrait, natural facial proportions, realistic skin texture, 85mm portrait lens, shallow depth of field, balanced composition, high detail, tasteful styling",
+      "negative_prompt": "child, minor, underage, explicit nudity, pornographic, low quality, blurry, bad anatomy, deformed hands, extra fingers, duplicate person, distorted face, text, watermark, logo",
+      "recommended": {
+        "aspect_ratio": "4:5",
+        "framing": "three-quarter portrait",
+        "lighting": "soft cinematic light"
+      }
+    }
+  ],
+  "item_count": 100,
+  "category_tree": [
+    {
+      "id": "culture",
+      "label": "Culture & Heritage",
+      "categories": [
+        "cultural",
+        "fantasy-history"
+      ]
+    },
+    {
+      "id": "fashion-lifestyle",
+      "label": "Fashion & Lifestyle",
+      "categories": [
+        "fashion",
+        "lifestyle",
+        "seasonal",
+        "fitness",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "professional",
+      "label": "Professional",
+      "categories": [
+        "professional"
+      ]
+    },
+    {
+      "id": "art-era",
+      "label": "Art & Era",
+      "categories": [
+        "illustration",
+        "fine-art",
+        "retro"
+      ]
+    },
+    {
+      "id": "fantasy-sci-fi",
+      "label": "Fantasy & Sci-Fi",
+      "categories": [
+        "fantasy",
+        "sci-fi"
+      ]
     }
   ]
 }

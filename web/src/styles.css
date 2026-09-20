@@ -123,3 +123,27 @@ footer { border-top:1px solid #27292e; padding:22px 0 32px; color:#666970; font-
   .settings-grid { grid-template-columns:1fr; }
   footer { flex-direction:column; gap:6px; }
 }
+
+.category-tree { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; margin: 0 0 14px; }
+.category-tree button { min-height:92px; text-align:left; border:1px solid #292b31; color:#b5b7bd; background:#141519; border-radius:14px; padding:13px; }
+.category-tree button:hover, .category-tree button.active { border-color:#79643f; background:#1d1a15; }
+.category-tree strong { display:block; color:#e0e1e4; font-size:13px; }
+.category-tree span { display:block; font-family:Georgia,serif; color:#d0af6c; font-size:22px; margin-top:8px; }
+.category-tree small { display:block; color:#666a72; margin-top:6px; line-height:1.35; text-transform:capitalize; }
+.random-button { margin-left:auto; border:1px solid #5b4c34; background:#211c14; color:#d8bd86; border-radius:11px; padding:10px 13px; white-space:nowrap; }
+.placeholder-preview { display:grid; place-items:center; }
+.placeholder-copy { display:flex; height:100%; width:100%; flex-direction:column; justify-content:flex-end; align-items:flex-start; padding:18px; background:linear-gradient(to top,rgba(0,0,0,.55),transparent 70%); }
+.placeholder-copy span { font-family:Georgia,serif; font-size:34px; color:rgba(225,196,135,.65); }
+.placeholder-copy strong { font-family:Georgia,serif; font-weight:500; font-size:20px; margin-top:6px; }
+.placeholder-copy small { color:#898c94; margin-top:5px; }
+.placeholder-copy.large span { font-size:58px; }
+.placeholder-copy.large strong { font-size:34px; }
+.similar-section { margin-top:22px; padding-top:18px; border-top:1px solid #292b31; }
+.similar-section .prompt-label small { color:#666a72; font-weight:400; }
+.similar-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; }
+.similar-grid button { text-align:left; border:1px solid #292b31; background:#16171b; color:#ddd; padding:10px; border-radius:10px; }
+.similar-grid button:hover { border-color:#6f5b39; }
+.similar-grid button span, .similar-grid button small { display:block; color:#6f727a; font-size:10px; }
+.similar-grid button strong { display:block; font-size:12px; margin:4px 0; }
+@media (max-width: 1120px) { .category-tree { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width: 560px) { .category-tree { grid-template-columns:repeat(2,minmax(0,1fr)); } .random-button { margin-left:0; width:100%; } }
