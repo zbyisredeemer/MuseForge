@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zbyisredeemer/MuseForge/schemas/model_adapters.schema.json",
+  "title": "MuseForge Model Adapters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "adapters"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "adapters": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "strategy",
+          "negative_prompt",
+          "version_pinned"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "generic",
+              "midjourney",
+              "flux",
+              "stable-diffusion"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "strategy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "negative_prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version_pinned": {
+            "const": false
+          },
+          "defaults": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "string",
+                "number",
+                "integer",
+                "boolean"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

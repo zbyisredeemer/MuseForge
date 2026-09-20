@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zbyisredeemer/MuseForge/schemas/gallery.schema.json",
+  "title": "MuseForge Gallery Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "title",
+    "description",
+    "catalog",
+    "safety",
+    "items",
+    "item_count",
+    "category_tree"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "item_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "catalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "image",
+        "rows",
+        "columns",
+        "item_count"
+      ],
+      "properties": {
+        "image": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rows": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "item_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adult_subjects_only",
+        "note"
+      ],
+      "properties": {
+        "adult_subjects_only": {
+          "const": true
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "category_tree": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "categories"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "culture",
+              "fashion-lifestyle",
+              "professional",
+              "art-era",
+              "fantasy-sci-fi"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "categories": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "index",
+          "title",
+          "category",
+          "group",
+          "tags",
+          "adult_subject",
+          "has_visual",
+          "prompt",
+          "negative_prompt",
+          "recommended"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[0-9]{2,3}-[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 2
+          },
+          "category": {
+            "enum": [
+              "cultural",
+              "fantasy-history",
+              "fashion",
+              "lifestyle",
+              "seasonal",
+              "fitness",
+              "nightlife",
+              "professional",
+              "fantasy",
+              "sci-fi",
+              "illustration",
+              "fine-art",
+              "retro"
+            ]
+          },
+          "group": {
+            "enum": [
+              "culture",
+              "fashion-lifestyle",
+              "professional",
+              "art-era",
+              "fantasy-sci-fi"
+            ]
+          },
+          "tags": {
+            "type": "array",
+            "minItems": 2,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "adult_subject": {
+            "const": true
+          },
+          "has_visual": {
+            "type": "boolean"
+          },
+          "catalog_cell": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "row",
+              "column"
+            ],
+            "properties": {
+              "row": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "column": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "image": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 30
+          },
+          "negative_prompt": {
+            "type": "string",
+            "minLength": 10
+          },
+          "recommended": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "aspect_ratio",
+              "framing",
+              "lighting"
+            ],
+            "properties": {
+              "aspect_ratio": {
+                "type": "string",
+                "pattern": "^[0-9]+:[0-9]+$"
+              },
+              "framing": {
+                "type": "string",
+                "minLength": 1
+              },
+              "lighting": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "has_visual": {
+                  "const": true
+                }
+              },
+              "required": [
+                "has_visual"
+              ]
+            },
+            "then": {
+              "anyOf": [
+                {
+                  "required": [
+                    "catalog_cell"
+                  ]
+                },
+                {
+                  "required": [
+                    "image"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

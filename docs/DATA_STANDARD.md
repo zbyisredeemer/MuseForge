@@ -1,29 +1,59 @@
-# MuseForge Beauty Prompt Data Standard
+# MuseForge Data Standard
 
-## Overview
+MuseForge treats prompt data as a versioned dataset rather than embedding large prompt tables directly in application code.
 
-All beauty prompt entries should follow a structured schema.
+## Source of truth
+
+- `dataset/gallery_manifest.json` — Gallery concepts and canonical prompts.
+- `dataset/model_adapters.json` — Supported model adapter metadata.
+- `schemas/gallery.schema.json` — Gallery JSON Schema.
+- `schemas/model_adapters.schema.json` — Model adapter JSON Schema.
+
+The Web and API copies of the Gallery manifest are build/runtime mirrors. CI verifies that they are byte-for-byte synchronized with the source dataset.
+
+## Gallery concept
+
+A Gallery concept contains:
 
 ```json
 {
-  "id": "unique_id",
-  "tags": [],
-  "beauty_style": "",
-  "country": "",
-  "clothing": "",
-  "scene": "",
-  "pose": "",
-  "makeup": "",
-  "camera": "",
-  "lighting": "",
-  "prompt": "",
-  "negative_prompt": ""
+  "id": "01-chinese-hanfu",
+  "index": 1,
+  "title": "Chinese Hanfu",
+  "group": "culture",
+  "category": "cultural",
+  "tags": ["China", "Hanfu", "classical", "garden"],
+  "adult_subject": true,
+  "has_visual": true,
+  "catalog_cell": {"row": 1, "column": 1},
+  "prompt": "...",
+  "negative_prompt": "...",
+  "recommended": {
+    "aspect_ratio": "4:5",
+    "framing": "three-quarter portrait",
+    "lighting": "soft cinematic light"
+  }
 }
 ```
 
-## Design Principles
+An item with `has_visual: true` must point either to an individual `image` or to a `catalog_cell` in the sprite catalog.
 
-- Separate visual attributes from generated prompt text.
-- Keep every attribute reusable.
-- Support Midjourney, Stable Diffusion and Flux style output.
-- Prefer descriptive visual language over model-specific keywords.
+## Invariants
+
+- IDs and indexes are unique.
+- Indexes are continuous from 1 through `item_count`.
+- Human subjects are fictional adults.
+- Every category belongs to its declared top-level group.
+- Prompt text is canonical and model-neutral.
+- Provider-specific syntax belongs in the model adapter layer.
+- Cultural/geographic tags describe creative inspiration, not a single appearance for a group.
+
+## Validation
+
+Install backend dependencies and run:
+
+```bash
+python scripts/validate_data.py
+```
+
+The CI workflow runs the same validation on every push and pull request.

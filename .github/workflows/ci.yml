@@ -21,7 +21,7 @@ jobs:
         run: npm run build
 
   api:
-    name: API validation
+    name: API and data validation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,29 +31,8 @@ jobs:
       - name: Install API dependencies
         run: pip install -r backend/requirements.txt
       - name: Compile Python
-        run: python -m compileall backend app
-      - name: Run adapter tests
+        run: python -m compileall backend app scripts
+      - name: Run unit tests
         run: python -m unittest discover -s backend/tests -p "test_*.py" -v
-      - name: Validate gallery manifest
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          root = Path(".")
-          source_path = root / "dataset/gallery_manifest.json"
-          source = json.loads(source_path.read_text())
-          models = json.loads((root / "dataset/model_adapters.json").read_text())
-
-          assert source["item_count"] == 100
-          assert len(source["items"]) == 100
-          assert len({item["id"] for item in source["items"]}) == 100
-          assert all(item.get("adult_subject") is True for item in source["items"])
-          assert len(source["category_tree"]) == 5
-          assert {item["id"] for item in models["adapters"]} == {
-              "generic", "midjourney", "flux", "stable-diffusion"
-          }
-          assert (root / "web/public/gallery_manifest.json").read_bytes() == source_path.read_bytes()
-          assert (root / "backend/data/gallery_manifest.json").read_bytes() == source_path.read_bytes()
-          print("MuseForge data validation OK")
-          PY
+      - name: Validate JSON datasets
+        run: python scripts/validate_data.py
