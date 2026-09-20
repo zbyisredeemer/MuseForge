@@ -16,6 +16,7 @@ MuseForge is a structured prompt-engineering project for **AI beauty portrait cr
 - **4 prompt adapters: Generic / Midjourney / FLUX / Stable Diffusion**
 - FastAPI Gallery + recommendation + prompt-adapter endpoints
 - Adapter unit tests
+- Draft 2020-12 JSON Schema validation for Gallery and model-adapter datasets
 - Docker + GitHub Actions CI
 
 ## Showcase
@@ -108,7 +109,7 @@ Prompt adapter metadata lives in [dataset/model_adapters.json](./dataset/model_a
 - Grow to 200+ carefully curated prompt concepts
 - Add vector similarity search and recommendation explanations
 - Add favorites / collections
-- Add API integration tests and JSON Schema validation
+- Add API integration tests
 - Add community submissions and moderation workflow
 
 ## Contributing

@@ -12,6 +12,7 @@ All notable changes to MuseForge are documented here.
 - Generic, Midjourney, FLUX, and Stable Diffusion prompt adapters
 - Prompt adapter API endpoints and adapter unit tests
 - Docker development workflow and GitHub Actions validation
+- Draft 2020-12 JSON Schemas and reusable dataset validation script
 - Structured beauty attribute dataset
 - Prompt generation API design
 
