@@ -4,7 +4,10 @@
   "version": "0.3.0",
   "type": "module",
   "scripts": {
+    "gallery:assets": "node scripts/generate-gallery-assets.mjs",
+    "predev": "npm run gallery:assets",
     "dev": "vite --host 0.0.0.0",
+    "prebuild": "npm run gallery:assets",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc --noEmit"
