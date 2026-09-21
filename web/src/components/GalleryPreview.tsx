@@ -1,14 +1,6 @@
 import { useState } from "react";
 import type { GalleryItem } from "../types";
-
-const images: Record<string, string> = {
-  "01-chinese-hanfu": "/gallery/01_chinese_hanfu.jpg",
-  "02-japanese-kimono": "/gallery/02_japanese_kimono.jpg",
-  "04-french-elegance": "/gallery/04_french_elegance.jpg",
-  "07-indian-sari": "/gallery/07_indian_sari.jpg",
-  "10-german-dirndl": "/gallery/10_german_dirndl.jpg",
-  "44-cyberpunk": "/gallery/44_cyberpunk.jpg",
-};
+import { galleryAssets } from "../generated/galleryAssets";
 
 const accents: Record<string, string> = {
   culture: "linear-gradient(145deg, #4b3025, #17191d 72%)",
@@ -19,7 +11,7 @@ const accents: Record<string, string> = {
 };
 
 export function hasProductionPreview(item: GalleryItem) {
-  return Boolean(images[item.id]);
+  return Boolean(galleryAssets[item.id]);
 }
 
 export default function GalleryPreview({
@@ -32,17 +24,20 @@ export default function GalleryPreview({
   large?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
-  const image = images[item.id];
+  const asset = galleryAssets[item.id];
 
-  if (image && !failed) {
+  if (asset && !failed) {
     return (
       <div className={"preview-frame" + (large ? " preview-frame-large" : "")}>
         <img
           className="gallery-image"
-          src={image}
+          src={asset.src}
           alt={item.title}
+          width={asset.width || undefined}
+          height={asset.height || undefined}
           loading={eager ? "eager" : "lazy"}
           decoding="async"
+          draggable={false}
           onError={() => setFailed(true)}
         />
       </div>
