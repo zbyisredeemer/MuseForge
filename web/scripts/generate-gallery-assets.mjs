@@ -60,11 +60,65 @@ function readPngSize(buffer) {
   };
 }
 
+function readWebpSize(buffer) {
+  if (
+    buffer.length < 30 ||
+    buffer.toString("ascii", 0, 4) !== "RIFF" ||
+    buffer.toString("ascii", 8, 12) !== "WEBP"
+  ) {
+    return null;
+  }
+
+  let offset = 12;
+  while (offset + 8 <= buffer.length) {
+    const chunkType = buffer.toString("ascii", offset, offset + 4);
+    const chunkLength = buffer.readUInt32LE(offset + 4);
+    const dataOffset = offset + 8;
+
+    if (chunkType === "VP8X" && dataOffset + 10 <= buffer.length) {
+      return {
+        width: buffer.readUIntLE(dataOffset + 4, 3) + 1,
+        height: buffer.readUIntLE(dataOffset + 7, 3) + 1,
+      };
+    }
+
+    if (
+      chunkType === "VP8 " &&
+      dataOffset + 10 <= buffer.length &&
+      buffer[dataOffset + 3] === 0x9d &&
+      buffer[dataOffset + 4] === 0x01 &&
+      buffer[dataOffset + 5] === 0x2a
+    ) {
+      return {
+        width: buffer.readUInt16LE(dataOffset + 6) & 0x3fff,
+        height: buffer.readUInt16LE(dataOffset + 8) & 0x3fff,
+      };
+    }
+
+    if (
+      chunkType === "VP8L" &&
+      dataOffset + 5 <= buffer.length &&
+      buffer[dataOffset] === 0x2f
+    ) {
+      const bits = buffer.readUInt32LE(dataOffset + 1);
+      return {
+        width: (bits & 0x3fff) + 1,
+        height: ((bits >>> 14) & 0x3fff) + 1,
+      };
+    }
+
+    offset = dataOffset + chunkLength + (chunkLength % 2);
+  }
+
+  return null;
+}
+
 function readImageSize(filePath) {
   const extension = path.extname(filePath).toLowerCase();
   const buffer = fs.readFileSync(filePath);
   if (extension === ".jpg" || extension === ".jpeg") return readJpegSize(buffer);
   if (extension === ".png") return readPngSize(buffer);
+  if (extension === ".webp") return readWebpSize(buffer);
   return null;
 }
 
@@ -94,6 +148,7 @@ for (const fileName of files) {
 
 const assets = {};
 const lowResolution = [];
+const unreadable = [];
 
 for (const [id, fileName] of [...selected.entries()].sort(([a], [b]) => a.localeCompare(b))) {
   const dimensions = readImageSize(path.join(galleryDir, fileName));
@@ -103,9 +158,11 @@ for (const [id, fileName] of [...selected.entries()].sort(([a], [b]) => a.locale
     height: dimensions?.height ?? 0,
   };
 
-  if (
-    dimensions &&
-    (dimensions.width < minimumWidth || dimensions.height < minimumHeight)
+  if (!dimensions) {
+    unreadable.push({ id, fileName });
+  } else if (
+    dimensions.width < minimumWidth ||
+    dimensions.height < minimumHeight
   ) {
     lowResolution.push({ id, fileName, ...dimensions });
   }
@@ -141,6 +198,13 @@ for (const item of lowResolution) {
   );
 }
 
-if (process.env.GALLERY_ASSET_STRICT === "1" && lowResolution.length > 0) {
+for (const item of unreadable) {
+  console.warn(`[gallery-assets] UNKNOWN SIZE ${item.fileName}`);
+}
+
+if (
+  process.env.GALLERY_ASSET_STRICT === "1" &&
+  (lowResolution.length > 0 || unreadable.length > 0)
+) {
   process.exitCode = 1;
 }

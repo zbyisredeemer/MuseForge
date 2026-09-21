@@ -18,20 +18,55 @@ export const galleryAssets: Record<string, GalleryAsset> = {
     "width": 128,
     "height": 160
   },
+  "03-korean-modern": {
+    "src": "/gallery/03_korean_modern.webp",
+    "width": 400,
+    "height": 500
+  },
   "04-french-elegance": {
     "src": "/gallery/04_french_elegance.jpg",
     "width": 180,
     "height": 225
+  },
+  "05-italian-luxury": {
+    "src": "/gallery/05_italian_luxury.webp",
+    "width": 400,
+    "height": 500
+  },
+  "06-american-street": {
+    "src": "/gallery/06_american_street.webp",
+    "width": 400,
+    "height": 500
   },
   "07-indian-sari": {
     "src": "/gallery/07_indian_sari.jpg",
     "width": 160,
     "height": 200
   },
+  "08-arabian-beauty": {
+    "src": "/gallery/08_arabian_beauty.webp",
+    "width": 400,
+    "height": 500
+  },
+  "09-british-classic": {
+    "src": "/gallery/09_british_classic.webp",
+    "width": 400,
+    "height": 500
+  },
   "10-german-dirndl": {
     "src": "/gallery/10_german_dirndl.jpg",
     "width": 128,
     "height": 160
+  },
+  "11-russian-winter": {
+    "src": "/gallery/11_russian_winter.webp",
+    "width": 400,
+    "height": 500
+  },
+  "12-nordic-style": {
+    "src": "/gallery/12_nordic_style.webp",
+    "width": 400,
+    "height": 500
   },
   "44-cyberpunk": {
     "src": "/gallery/44_cyberpunk.jpg",
