@@ -5,7 +5,7 @@ The MuseForge Gallery is the visual and searchable entry point to the prompt dat
 ## Current catalog
 
 - 100 structured prompt concepts
-- 50 concepts with optimized image previews
+- 50 concepts with optimized image-backed showcase references
 - 50 prompt-first concepts with category placeholders
 - 5 category groups
 - Search, random discovery, and similarity recommendations
@@ -30,14 +30,53 @@ The current similarity engine is intentionally transparent:
 
 This is a deterministic baseline that can later be replaced or complemented by embeddings.
 
-## Asset strategy
+## Web preview asset strategy
 
-Do not commit every full-resolution generation to Git.
+Gallery cards should use **individual portrait assets**, not enlarged cells cropped from a catalog sprite. The catalog sprite remains useful for README/docs overviews, but it should not be used as the source for production card previews.
 
-- Keep web-optimized showcase previews in `assets/showcase/`.
-- Use sprite catalogs for large batches.
-- Add individual assets for high-value featured examples.
+Put individual web previews in:
+
+```text
+web/public/gallery/
+```
+
+Use the Gallery item id as the filename, replacing hyphens with underscores. Example:
+
+```text
+01-chinese-hanfu
+        ↓
+web/public/gallery/01_chinese_hanfu.webp
+```
+
+Preferred image requirements:
+
+- aspect ratio: **4:5**
+- recommended: **1024 × 1280**
+- minimum: **768 × 960**
+- preferred format: **WebP**
+- JPEG/PNG are supported as fallbacks
+- optimize for web delivery without destroying facial or clothing detail
+
+The Web app generates its asset registry automatically before `npm run dev` and `npm run build`:
+
+```bash
+cd web
+npm run gallery:assets
+```
+
+The generator scans `public/gallery/`, prefers WebP when multiple formats share the same id, records intrinsic dimensions, and prints a warning for previews below the minimum resolution. Set `GALLERY_ASSET_STRICT=1` when you want low-resolution assets to fail the build.
+
+This means new preview files do not require a hand-maintained React image map.
+
+## Repository asset strategy
+
+Do not commit every full-resolution source generation to Git.
+
+- Keep source/master generations outside the Web bundle or in external object storage when the collection becomes large.
+- Commit web-optimized 4:5 previews needed by the public Gallery.
+- Keep overview sprite catalogs only for documentation and contact sheets.
 - Keep prompts and metadata in JSON, not embedded in image files.
+- Prefer deterministic filenames so assets can be generated, validated, and deployed automatically.
 
 ## Safety and representation
 
