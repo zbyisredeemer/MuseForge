@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { GalleryItem } from "../types";
-import { galleryAssets } from "../generated/galleryAssets";
+import { galleryAssets, galleryAssetQuality } from "../generated/galleryAssets";
 
 const accents: Record<string, string> = {
   culture: "linear-gradient(145deg, #4b3025, #17191d 72%)",
@@ -10,8 +10,24 @@ const accents: Record<string, string> = {
   "fantasy-sci-fi": "linear-gradient(145deg, #26304f, #17191d 72%)",
 };
 
+function isAssetReady(item: GalleryItem) {
+  const asset = galleryAssets[item.id];
+  if (!asset) return false;
+
+  // Unknown dimensions (for example WebP) are allowed through. The build-time
+  // asset generator still prefers WebP and can enforce strict validation when
+  // desired. Known undersized JPEG/PNG previews are intentionally hidden so the
+  // production Gallery never stretches tiny source images into blurry cards.
+  if (!asset.width || !asset.height) return true;
+
+  return (
+    asset.width >= galleryAssetQuality.minimumWidth &&
+    asset.height >= galleryAssetQuality.minimumHeight
+  );
+}
+
 export function hasProductionPreview(item: GalleryItem) {
-  return Boolean(galleryAssets[item.id]);
+  return isAssetReady(item);
 }
 
 export default function GalleryPreview({
@@ -25,8 +41,9 @@ export default function GalleryPreview({
 }) {
   const [failed, setFailed] = useState(false);
   const asset = galleryAssets[item.id];
+  const ready = isAssetReady(item);
 
-  if (asset && !failed) {
+  if (asset && ready && !failed) {
     return (
       <div className={"preview-frame" + (large ? " preview-frame-large" : "")}>
         <img
@@ -44,6 +61,12 @@ export default function GalleryPreview({
     );
   }
 
+  const status = failed
+    ? "Preview unavailable"
+    : asset && !ready
+      ? "HD preview pending"
+      : "Preview being upgraded";
+
   return (
     <div
       className={"preview-frame placeholder-preview" + (large ? " preview-frame-large" : "")}
@@ -52,7 +75,7 @@ export default function GalleryPreview({
       <div className={"placeholder-copy" + (large ? " large" : "")}>
         <span>{String(item.index).padStart(2, "0")}</span>
         <strong>{item.title}</strong>
-        <small>{failed ? "Preview unavailable" : "Preview being upgraded"}</small>
+        <small>{status}</small>
       </div>
     </div>
   );
