@@ -78,6 +78,6 @@ export const galleryAssets: Record<string, GalleryAsset> = {
 export const galleryAssetQuality = {
   recommendedWidth: 1024,
   recommendedHeight: 1280,
-  minimumWidth: 768,
-  minimumHeight: 960,
+  minimumWidth: 400,
+  minimumHeight: 500,
 } as const;

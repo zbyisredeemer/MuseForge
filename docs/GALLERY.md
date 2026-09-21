@@ -52,7 +52,8 @@ Preferred image requirements:
 
 - aspect ratio: **4:5**
 - recommended: **1024 × 1280**
-- minimum: **768 × 960**
+- hard display floor: **400 × 500**
+- Retina-friendly target: **768 × 960**
 - preferred format: **WebP**
 - JPEG/PNG are supported as fallbacks
 - optimize for web delivery without destroying facial or clothing detail
@@ -64,7 +65,7 @@ cd web
 npm run gallery:assets
 ```
 
-The generator scans `public/gallery/`, prefers WebP when multiple formats share the same id, records intrinsic dimensions, and prints a warning for previews below the minimum resolution. Set `GALLERY_ASSET_STRICT=1` when you want low-resolution assets to fail the build.
+The generator scans `public/gallery/`, prefers WebP when multiple formats share the same id, records intrinsic dimensions, and prints a warning for previews below the minimum resolution. The Web Gallery refuses to stretch assets below 400×500 into portrait cards. For crisp Retina/high-DPI presentation, 768×960 or larger is preferred, with 1024×1280 as the recommended production size. Set `GALLERY_ASSET_STRICT=1` when you want assets below the hard display floor to fail the build.
 
 This means new preview files do not require a hand-maintained React image map.
 

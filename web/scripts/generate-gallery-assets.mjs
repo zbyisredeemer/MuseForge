@@ -8,8 +8,8 @@ const galleryDir = path.join(webRoot, "public", "gallery");
 const outputFile = path.join(webRoot, "src", "generated", "galleryAssets.ts");
 
 const preferredExtensions = [".webp", ".jpg", ".jpeg", ".png"];
-const minimumWidth = 768;
-const minimumHeight = 960;
+const minimumWidth = 400;
+const minimumHeight = 500;
 
 function imageId(fileName) {
   return path.basename(fileName, path.extname(fileName)).replaceAll("_", "-");
